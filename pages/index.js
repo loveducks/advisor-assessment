@@ -6,7 +6,7 @@ const Home = () => {
 			<div className={styles.title}>Welcome</div>
 			<div className={styles.card}>
 				{["best-hello-ever", "best-hello-world-ever", "best-world-ever"].map(link => (
-					<Link href={link}>
+					<Link href={link} key={link}>
 						<a className={styles.description} style={{color: "cornflowerblue"}}>
 							{link}
 						</a>

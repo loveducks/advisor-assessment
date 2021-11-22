@@ -1,10 +1,10 @@
-import React, {useEffect, useState} from "react"
+import React from "react"
 
 import {gql} from "@apollo/client"
 import client from "../src/lib/apollo-client"
 import {getJSONresponse} from "../src/lib/api"
 
-const Info = ({data}) => {
+const Info = ({data = {title: "test", description: "filler"}}) => {
 	return (
 		<>
 			<div>{data.title}</div>

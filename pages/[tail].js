@@ -3,13 +3,16 @@ import React from "react"
 import {gql} from "@apollo/client"
 import client from "../src/lib/apollo-client"
 import {getJSONresponse} from "../src/lib/api"
+import styles from "../styles/Home.module.css"
 
 const Info = ({data = {title: "test", description: "filler"}}) => {
 	return (
-		<>
-			<div>{data.title}</div>
-			<div>{data.description}</div>
-		</>
+		<div className={styles.main}>
+			<div className={styles.card}>
+				<div className={styles.description}>{data.title}</div>
+				<div className={styles.description}>{data.description}</div>
+			</div>
+		</div>
 	)
 }
 

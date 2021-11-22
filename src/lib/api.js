@@ -1,5 +1,5 @@
 export const getJSONresponse = async json_id => {
-	const response = await fetch(process.env.BASE_URL + "/json/data.json", {
+	const response = await fetch(process.env.BASE_URL, {
 		method: "GET"
 	})
 	const data = await response.json()
